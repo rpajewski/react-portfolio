@@ -1,29 +1,36 @@
 import React, { useState } from 'react'
 import Header from './components/Header'
 import Nav from './components/Nav'
-import About from './components/About'
-import Portfolio from './components/Portfolio'
+import Sections from './components/Sections'
 import ContactForm from './components/Contact'
-import Resume from './components/Resume'
 import Footer from './components/Footer'
 
 function App() {
+  const [contactSelected, setContactSelected] = useState(false);
+  const [navigation] = useState([ { name: 'About Me' }, { name: 'Portfolio' }, { name: 'Resume' } ])
+
+  const [currentNavigation, setCurrentNavigation] = useState(navigation[0])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <Nav
+        navigation={navigation}
+        setCurrentNavigation={setCurrentNavigation}
+        currentNavigation={currentNavigation}
+        contactSelected={contactSelected}
+        setContactSelected={setContactSelected}
+      ></Nav>
+      <main>
+        <div>
+          {!contactSelected ? (
+            <Sections currentNavigation={currentNavigation} />
+            ) : (
+            <ContactForm />
+          )}
+        </div>
+      </main>
+      <Footer />
     </div>
   )
 }

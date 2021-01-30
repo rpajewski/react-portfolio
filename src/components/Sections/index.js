@@ -2,7 +2,7 @@ import React from 'react'
 import About from '../About'
 import Portfolio from '../Portfolio'
 import Resume from '../Resume'
-import { capitalizeFirstLetter } from '../../utils/helpers'
+import ContactForm from '../Contact'
 
 function Sections({ currentNavigation }) {
     const { name } = currentNavigation
@@ -15,6 +15,8 @@ function Sections({ currentNavigation }) {
                 return <Portfolio />
             case 'Resume':
                 return <Resume />
+            case 'Contact Me':
+                return <ContactForm />
             default:
                 break
         }
@@ -22,7 +24,6 @@ function Sections({ currentNavigation }) {
 
     return (
         <section>
-            <h1 data-testid="h1tag">{capitalizeFirstLetter(name)}</h1>
             {renderPage(name)}
         </section>
     )

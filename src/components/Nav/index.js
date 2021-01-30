@@ -15,35 +15,22 @@ function Nav(props) {
     }, [currentNavigation])
 
     return (
-        <header className="flex-row px-1">
             <nav>
-                <ul className="flex-row">
-
+                <ul>
                     {navigation.map((nav) => (
-                        <li
-                            className={`mx-1 ${
-                                currentNavigation.name === nav.name && !contactSelected && `navActive`
-                                }`}
-                            key={nav.name}
-                        >
-
-                            <span
-                                onClick={() => {
+                    <li className={`${currentNavigation.name === nav.name && !contactSelected && `navActive`}`} key={nav.name}>
+                        <span
+                            onClick={() => {
                                 setCurrentNavigation(nav)
                                 setContactSelected(false)
-                                }}
-                            >
-                                {capitalizeFirstLetter(nav.name)}
-                            </span>
-                        </li>
-                    ))}
-
-                    <li className={`mx-2 ${contactSelected && 'navActive'}`}>
-                        <span onClick={() => setContactSelected(true)}>Contact</span>
+                            }}
+                        >
+                            {capitalizeFirstLetter(nav.name)}
+                         </span>
                     </li>
+                    ))}
                 </ul>
             </nav>
-        </header>
     )
 }
 

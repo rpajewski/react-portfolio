@@ -88,7 +88,7 @@ header {
 footer {
   padding: 20px 35px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   background-image: url("./assets/alt-hero.png");
   background-size: cover;
@@ -96,12 +96,41 @@ footer {
   background-attachment: fixed;
   background-position: 50%;
   overflow: auto;
+  margin-top: 50px;
+}
+
+footer a {
+  padding: 10px;
+}
+
+.hero {
+  background-image: url("./assets/alt-hero.png");
+  background-size: cover;
+  min-height: 200px;
+  background-position: center;
+  background-attachment: fixed;
+  background-position: 80%;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.hero-statement {
+  display: flex;
+  margin: 20px 200px;
+  background-color: var(--light);
+  border-bottom: 3px solid var(--tertiary);
+}
+
+.hero h3 {
+  padding: 0px 10px 0px 10px;
 }
 
 header h1 {
   font-weight: bold;
   font-size: 36px;
-  color: var(--primary-color);
+  color: var(--dark);
   margin: 0;
   z-index: 99;
 }
@@ -117,16 +146,31 @@ header h1 {
   border-bottom: 3px solid var(--tertiary);
 }
 
-nav {
-  width: 100%;
-  margin-top: 10px;
-  justify-content: center;
+header a {
   text-decoration: none;
+  color: var(--primary);
 }
 
-nav a:hover {
-  color: var(--secondary);
-  background-color: var(--dark);
+header nav {
+  margin: 7px 0;
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+header nav ul li {
+  padding: 10px 15px;
+  font-size: 1.55vw;
+  text-shadow: 0 0 10px rgba(255, 163, 114, 0.5);
+}
+
+header nav ul li:hover {
+  text-decoration: underline var(--tertiary);
 }
 
 .page-title {
@@ -161,6 +205,26 @@ nav a:hover {
 
 .btn-inline {
   display: inline;
+}
+
+.bio {
+  margin-top: 50px;
+  padding-left: 50px;
+  padding-bottom: 50px;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-bottom: 2px solid var(--tertiary-color);
+}
+
+.bio-text {
+  color: var(--primary-color);
+  font-size: 14px;
+  font-weight: 500px;
+  width: 100%;
+  padding-top: 5px;
+  border-left: 3px solid var(--secondary-color);
 }
 
 /* CARDS */

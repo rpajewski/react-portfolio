@@ -1,5 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import Header from './components/Header'
+import Nav from './components/Nav'
+import About from './components/About'
+import Portfolio from './components/Portfolio'
+import ContactForm from './components/Contact'
+import Resume from './components/Resume'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -19,7 +25,7 @@ function App() {
         </a>
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

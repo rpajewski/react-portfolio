@@ -34,17 +34,17 @@ function ContactForm() {
 
     return (
         <section>
-            <h1>Contact me</h1>
+            <h1 className="info-header">Contact me</h1>
             <form id="contact-form" onSubmit={handleSubmit}>
-                <div>
+                <div className="p-1 my-1">
                     <label htmlFor="name">Name:</label>
                     <input type="text" defaultValue={name} onBlur={handleChange} name="name" />
                 </div>
-                <div>
+                <div className="p-1 my-1">
                     <label htmlFor="email">Email address:</label>
                     <input type="email" defaultValue={email} onBlur={handleChange} name="email" />
                 </div>
-                <div>
+                <div className="p-1 my-1">
                     <label htmlFor="message">Message:</label>
                     <textarea name="message" defaultValue={message} onBlur={handleChange} rows="5"  />
                 </div>

@@ -165,7 +165,7 @@ header nav ul {
 
 header nav ul li {
   padding: 10px 15px;
-  font-size: 1.55vw;
+  font-size: 24px;
   text-shadow: 0 0 10px rgba(255, 163, 114, 0.5);
 }
 
@@ -210,21 +210,18 @@ header nav ul li:hover {
 .bio {
   margin-top: 50px;
   padding-left: 50px;
+  padding-right: 50px;
   padding-bottom: 50px;
-  width: 80%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  border-bottom: 2px solid var(--tertiary-color);
+  width: 100%;
 }
 
 .bio-text {
-  color: var(--primary-color);
+  color: var(--dark);
   font-size: 14px;
   font-weight: 500px;
   width: 100%;
   padding-top: 5px;
-  border-left: 3px solid var(--secondary-color);
+  border-left: 3px solid var(--secondary);
 }
 
 /* CARDS */
@@ -236,10 +233,14 @@ header nav ul li:hover {
 }
 
 .card-header {
-  color: var(--primary);
+  color: var(--light);
   background-color: var(--dark);
   padding: 2.5%;
   border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
+}
+
+.card-header h2 {
+  color: var(--light);
 }
 
 .card-body {
@@ -266,6 +267,14 @@ header nav ul li:hover {
   font-size: 1.2rem;
   border: 2px solid var(--dark);
   border-radius: var(--border-radius);
+}
+
+.info-header {
+  margin: 20px;
+}
+
+#contact-form {
+  margin: 20px;
 }
 
 /* LAYOUT */
